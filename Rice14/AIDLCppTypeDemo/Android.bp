@@ -1,0 +1,23 @@
+cc_binary {                 
+    name: "IHelloTypeServer",
+    srcs: ["HelloServer.cpp", "IHello.cpp", "com/yuandaima/Student.cpp"],
+    shared_libs: [
+        "libbase",  // android-baseライブラリをリンクする
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libbinder",
+    ],
+}
+
+cc_binary {
+    name: "IHelloTypeClient",
+    srcs: ["HelloClient.cpp", "IHello.cpp", "com/yuandaima/Student.cpp"],
+    shared_libs: [
+        "libbase",  // android-baseライブラリをリンクする
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libbinder",
+    ],
+}
